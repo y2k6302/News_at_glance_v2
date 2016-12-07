@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="">
+		<script src=""></script>
+		<title>news</title>
+	</head>
+	<body>
+		<form action="/news/getNews" method="get">
+			關鍵字：<input type="text" name="search">
+			<input type="submit" name="傳送">
+		</form>
+
+		{% for post in news_list %}
+		<h3>{{post.title}}</h3>
+		{% endfor %}
+
+
+	</body>
+
+</html>
