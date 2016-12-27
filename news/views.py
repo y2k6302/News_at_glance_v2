@@ -14,7 +14,7 @@ def post_list(request):
 def get_list(request):
 
     search_list = request.GET['search']  # 我
-    news_list = News().getNews(search_list)
+    news_list, ptt_list = News().getNews(search_list)
 
     # return render(request,'post_list.html',{})
     return render_to_response('post_list.html', locals())
