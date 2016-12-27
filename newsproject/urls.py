@@ -1,4 +1,4 @@
-#-*- coding: UTF-8 -*-
+﻿# -*- coding: UTF-8 -*-
 """newsproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -17,6 +17,7 @@ Including another URLconf
 
 from django.conf.urls import include, url
 urlpatterns = [
-    url(r'^news/', include('news.urls')),  # 這邊會出現突然
+    # 當url為news/開頭，就進到news資料夾中的url.py去找
+    url(r'^news/', include('news.urls')),
 
 ]

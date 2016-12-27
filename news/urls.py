@@ -1,4 +1,4 @@
-"""newsproject URL Configuration
+﻿"""newsproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
@@ -14,10 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 
-#-*- coding: UTF-8 -*-
+# -*- coding: UTF-8 -*-
 from django.conf.urls import url
 from . import views
 urlpatterns = [
+    # news/進來後至viws.py的post_list方法
     url(r'^$', views.post_list, name='post_list'),
+    # 當為getNews則進入get_list方法
     url(r'getNews$', views.get_list, name='get_list'),
 ]
